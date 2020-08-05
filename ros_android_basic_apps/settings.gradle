@@ -1,2 +1,3 @@
 rootProject.name='ros_android_basic_apps'
-include ':app'
+include ':android_sensor_publisher'
+include ':simple_pub'

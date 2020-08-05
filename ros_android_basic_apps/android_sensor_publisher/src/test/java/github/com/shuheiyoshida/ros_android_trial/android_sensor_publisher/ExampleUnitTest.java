@@ -1,4 +1,4 @@
-package github.com.shuheiyoshida.ros_android_trial.ros_android_basic_apps;
+package github.com.shuheiyoshida.ros_android_trial.android_sensor_publisher;
 
 import org.junit.Test;
 

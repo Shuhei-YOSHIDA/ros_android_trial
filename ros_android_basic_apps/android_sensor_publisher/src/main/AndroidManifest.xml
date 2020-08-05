@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="github.com.shuheiyoshida.ros_android_trial.ros_android_basic_apps">
+    package="github.com.shuheiyoshida.ros_android_trial.android_sensor_publisher">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
