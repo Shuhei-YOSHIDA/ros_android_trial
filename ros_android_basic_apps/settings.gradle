@@ -1,0 +1,2 @@
+rootProject.name='ros_android_basic_apps'
+include ':app'
