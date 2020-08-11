@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_android_trial</name>
+  <version>0.0.0</version>
+  <description>The ros_android_trial package</description>
+
+  <maintainer email="shuhei@todo.todo">shuhei</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
