@@ -7,12 +7,16 @@ package github.com.shuheiyoshida.ros_android_trial.simple_pub;
 //import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import org.ros.android.AppCompatRosActivity;
 import org.ros.android.MessageCallable;
 import org.ros.android.view.RosTextView;
 import org.ros.node.NodeConfiguration;
 import org.ros.node.NodeMainExecutor;
+import org.w3c.dom.Text;
 
 //import github.com.shuheiyoshida.ros_android_trial.simple_pub.SimplePublisher;
 
@@ -43,6 +47,11 @@ public class MainActivity extends AppCompatRosActivity {
                 return message.getData();
             }
         });
+
+        // Prepare update-button
+        Button btClick = findViewById(R.id.button);
+        TextUpdateTap textUpdateTap = new TextUpdateTap();
+        btClick.setOnClickListener(textUpdateTap);
     }
 
     @Override
@@ -62,5 +71,17 @@ public class MainActivity extends AppCompatRosActivity {
         // The RosTextView is also a NodeMain that must be executed in order to
         // start displaying incoming messages.
         nodeMainExecutor.execute(rosTextView, nodeConfiguration);
+    }
+
+    /**
+     *  Class for clicking a text-update button
+     */
+    private class TextUpdateTap implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            EditText input = findViewById(R.id.editText);
+            String inputStr = input.getText().toString();
+            simplePublisher.setTextData(inputStr);
+        }
     }
 }

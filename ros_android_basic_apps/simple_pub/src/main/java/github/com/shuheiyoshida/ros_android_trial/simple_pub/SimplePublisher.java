@@ -24,6 +24,10 @@ public class SimplePublisher extends AbstractNodeMain {
         text_data = "text data is not set yet.";
     }
 
+    public void setTextData(String t) {
+        text_data = t;
+    }
+
     @Override
     public GraphName getDefaultNodeName() {
         return GraphName.of("ros_android_trial/simple_pub");
@@ -61,27 +65,6 @@ public class SimplePublisher extends AbstractNodeMain {
 
                 at.getImage().getHeader().setFrameId("custom_camera");
                 at.getImage().getHeader().setStamp(connectedNode.getCurrentTime());
-//
-//                geometry_msgs.Pose p = new geometry_msgs.Pose();
-//                geometry_msgs.Point po = null;
-//                po.setX(1.);
-//                po.setY(2.);
-//                po.setZ(3.);
-//                p.setPosition(po);
-//                geometry_msgs.Quaternion qu = null;
-//                qu.setW(1.);
-//                qu.setX(0.);
-//                qu.setY(0.);
-//                qu.setZ(0.);
-//                p.setOrientation(qu);
-//                at.setPose(p);
-//
-//                sensor_msgs.Image img = null;
-//                std_msgs.Header header = null;
-//                header.setFrameId("custom_camera");
-//                org.ros.message.Time t = connectedNode.getCurrentTime();
-//                header.setStamp(t);
-//                img.setHeader(header);
 
                 customMsgPublisher.publish(at);
 
